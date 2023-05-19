@@ -1,0 +1,287 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Estilos generales */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.btn {
+    background-color: #40409b;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    display: inline-block;
+
+}
+
+a.btn:hover {
+    background-color: #40409b;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    font-size:  36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    margin: 16px 0;
+}
+
+/* Responsive */
+img {
+    max-width: 100%;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 16px;
+    width: 100%;
+    background-color: #fbfbfb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 10px -5px #40409b;   
+}
+
+#menu-button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 26px;
+    width: 40px;
+    height: 40px;
+}
+
+img#close-menu {
+    display: none;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Menú de navegación */
+
+nav {
+    display: none;
+}
+
+ul#menu {
+    display: flex;
+    font-size: 20px;
+}
+
+li.menu-item a {
+    padding: 16px;
+    display: inline-block;
+}
+
+/* Agrego estilos para el .menu-item.active */
+li.menu-item:hover,
+li.menu-item.active {
+    background: rgba(89, 103, 175, 0.3);
+    transition: background-color 0.3s;
+}
+
+/* Estilos para menu mobile */
+body.mobile-menu-active {
+	overflow: hidden;
+}
+
+body.mobile-menu-active img#close-menu {
+	display: block;
+}
+
+body.mobile-menu-active img#open-menu {
+	display: none;
+}
+
+body.mobile-menu-active header {
+	height: 30vh;
+	flex-wrap: wrap;
+	transition: height 0.3s;
+}
+
+body.mobile-menu-active nav {
+	display: block;
+	width: 100%;
+	height: 70%;
+}
+
+body.mobile-menu-active ul#menu {
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+}
+
+
+/* Main */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+
+/* Sección Inicio */
+section#inicio {
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+figure.presentacion-img {
+    margin-bottom: 20px;
+}
+
+figure.presentacion-img img {
+    border-radius: 50%;
+    width: 400px;
+}
+
+article.presentacion {
+    width: 100%;
+}
+
+
+/* Sección Contacto */
+section#contacto p {
+    text-align: center;
+    max-width: 600px;
+}
+
+article.hablemos {
+    background: rgba(89, 103, 175, 0.3);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul#contact-links {
+    display: flex;
+    margin-top: 20px;
+}
+
+ul#contact-links li {
+    margin: 16px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+ul#contact-links li:hover {
+    background: rgba(89, 103, 175, 0.3);
+    transition: background-color 0.3s;
+}
+
+img.icon {
+    width: 80px;
+}
+
+
+/* Footer */
+footer {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #40409b;
+    color: #fbfbfb;
+}
+
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 48px;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    section#inicio {
+        flex-direction: row;
+    }
+
+    article.presentacion {
+        width: 50%;
+    }
+
+    ul#contact-links li {
+        margin: 32px;
+    }
+
+    /* Para resolver conflictos por menú mobile */
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    body.mobile-menu-active header {
+		height: 90px;
+		align-items: center;
+	}
+	body.mobile-menu-active nav {
+		height: auto;
+		width: auto;
+	}
+
+	body.mobile-menu-active ul#menu {
+		flex-direction: row;
+	}
+
+    body.mobile-menu-active {
+        overflow: auto;
+    }
+
+}
+
